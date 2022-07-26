@@ -1,12 +1,9 @@
 import * as cdk from '@aws-cdk/core';
 import * as ec2 from '@aws-cdk/aws-ec2';
-import { VPCStack } from './vpc-stack';
+import * as route53 from '@aws-cdk/aws-route53';
 
-export class CdkStack extends cdk.Stack {
+export class Ec2Stack extends cdk.Stack {
 	constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
 		super(scope, id, props);
-
-		// The code that defines your stack goes here
-		const vpc = new VPCStack(this, 'VPCStack');
 	}
 }
